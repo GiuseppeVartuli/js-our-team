@@ -61,15 +61,21 @@ const team = [
 console.log(team);
 
 // Stampare le stesse informazioni su DOM sottoforma di stringhe.
+const provaEl = document.querySelector(".container .row");
 
 for (let i = 0; i < team.length; i++) {
   const member = team[i];
   console.log(member);
-  document.getElementById("name").innerHTML += i + `${member.nome}` + team[i];
-  document.getElementById("role").innerHTML +=
-    i + 1 + `${member.ruolo}` + team[i];
-  document.getElementById("photo").innerHTML +=
-    i + 1 + `${member.foto}` + team[i];
+
+  const colMarkup = `
+      <div class="col-12 d-flex gap-2">
+              <div id="name">${member.nome}</div>
+              <div id="role">${member.ruolo}</div>
+              <div id="photo">${member.foto}</div>
+            </div>
+  `;
+
+  provaEl.insertAdjacentHTML("beforeend", colMarkup);
 }
 
 /*
@@ -77,3 +83,11 @@ document.getElementById("name").innerHTML = `${member.nome}`;
   document.getElementById("role").innerHTML = `${member.ruolo}`;
   document.getElementById("photo").innerHTML = `${member.foto}`;
   */
+
+/*
+document.getElementById("name").innerHTML += i + `${member.nome}` + team[i];
+  document.getElementById("role").innerHTML +=
+    i + 1 + `${member.ruolo}` + team[i];
+  document.getElementById("photo").innerHTML +=
+    i + 1 + `${member.foto}` + team[i];
+    */
