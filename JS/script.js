@@ -65,7 +65,15 @@ console.log(team);
 for (let i = 0; i < team.length; i++) {
   const member = team[i];
   console.log(member);
-  document.getElementById("name").innerHTML = `${team.nome}`;
-  document.getElementById("role").innerHTML = `${team.ruolo}`;
-  document.getElementById("photo").innerHTML = `${team.foto}`;
+  document.getElementById("name").innerHTML += i + `${member.nome}` + team[i];
+  document.getElementById("role").innerHTML +=
+    i + 1 + `${member.ruolo}` + team[i];
+  document.getElementById("photo").innerHTML +=
+    i + 1 + `${member.foto}` + team[i];
 }
+
+/*
+document.getElementById("name").innerHTML = `${member.nome}`;
+  document.getElementById("role").innerHTML = `${member.ruolo}`;
+  document.getElementById("photo").innerHTML = `${member.foto}`;
+  */
