@@ -68,26 +68,22 @@ for (let i = 0; i < team.length; i++) {
   console.log(member);
 
   const colMarkup = `
-      <div class="col-12 d-flex gap-2">
-              <div id="name">${member.nome}</div>
-              <div id="role">${member.ruolo}</div>
-              <div id="photo">${member.foto}</div>
-            </div>
+  <div class="card" style="width: 18rem">
+  <img src='${member.foto}' class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">${member.nome}</h5>
+    <p class="card-text">${member.ruolo}</p>
+  </div>
+</div>
   `;
 
   provaEl.insertAdjacentHTML("beforeend", colMarkup);
 }
 
 /*
-document.getElementById("name").innerHTML = `${member.nome}`;
-  document.getElementById("role").innerHTML = `${member.ruolo}`;
-  document.getElementById("photo").innerHTML = `${member.foto}`;
-  */
-
-/*
-document.getElementById("name").innerHTML += i + `${member.nome}` + team[i];
-  document.getElementById("role").innerHTML +=
-    i + 1 + `${member.ruolo}` + team[i];
-  document.getElementById("photo").innerHTML +=
-    i + 1 + `${member.foto}` + team[i];
-    */
+<div class="col-12 d-flex gap-2">
+              <div id="name">${member.nome}</div>
+              <div id="role">${member.ruolo}</div>
+              <div id="photo">${member.foto}</div>
+            </div>
+            */
