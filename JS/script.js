@@ -56,8 +56,7 @@ const team = [
   },
 ];
 
-// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto.
-
+// Bonus 1 & Bonus 2
 console.log(team);
 
 // Stampare le stesse informazioni su DOM sottoforma di stringhe.
@@ -80,8 +79,8 @@ for (let i = 0; i < team.length; i++) {
   provaEl.insertAdjacentHTML("beforeend", colMarkup);
 }
 
+// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto.
 /*
-
 <div class="col-12 d-flex gap-2">
               <div id="name">${member.nome}</div>
               <div id="role">${member.ruolo}</div>
